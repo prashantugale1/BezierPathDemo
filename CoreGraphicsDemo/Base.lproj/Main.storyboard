@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreGraphicsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qvj-pR-9Uh" customClass="CounterView" customModule="CoreGraphicsDemo" customModuleProvider="target">
+                                <rect key="frame" x="185" y="185" width="230" height="230"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgg-om-Uwd">
+                                        <rect key="frame" x="93" y="88" width="45" height="55"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                        <color key="textColor" red="0.42727179279999999" green="0.01516241776" blue="0.31098375820000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="bgg-om-Uwd" firstAttribute="centerX" secondItem="Qvj-pR-9Uh" secondAttribute="centerX" id="25t-Er-XDt"/>
+                                    <constraint firstItem="bgg-om-Uwd" firstAttribute="centerY" secondItem="Qvj-pR-9Uh" secondAttribute="centerY" id="SGp-mq-Qxi"/>
+                                    <constraint firstAttribute="width" constant="230" id="ia6-m8-Ooe"/>
+                                    <constraint firstAttribute="height" constant="230" id="w2f-NN-yTP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="counter">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
+                                        <color key="value" red="0.42727179276315785" green="0.015162417763157895" blue="0.31098375822368424" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="counterColor">
+                                        <color key="value" red="0.5" green="0.43307976973684209" blue="0.65146998355263153" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBC-gF-lXq" customClass="FloatingButtonView" customModule="CoreGraphicsDemo" customModuleProvider="target">
+                                <rect key="frame" x="50" y="475" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Qpf-tZ-DRj"/>
+                                    <constraint firstAttribute="height" constant="75" id="fDA-bQ-rbo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.20784313725490197" green="0.61960784313725492" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="plusPathHeight">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showPlus" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="minusButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G2z-lr-v0L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpx-Pz-PiN" customClass="FloatingButtonView" customModule="CoreGraphicsDemo" customModuleProvider="target">
+                                <rect key="frame" x="475" y="475" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Gqi-PD-Efy"/>
+                                    <constraint firstAttribute="height" constant="75" id="bpE-pP-5P6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.20784313725490122" green="0.61960784313725492" blue="0.9342314886480908" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="plusPathThickness">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="plusButtonClikced:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BY1-3O-dBW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xBC-gF-lXq" secondAttribute="bottom" constant="50" id="1nQ-Zo-Mah"/>
+                            <constraint firstAttribute="trailing" secondItem="zpx-Pz-PiN" secondAttribute="trailing" constant="50" id="2Ff-eW-SIN"/>
+                            <constraint firstItem="xBC-gF-lXq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="3ed-Sr-w16"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zpx-Pz-PiN" secondAttribute="bottom" constant="50" id="Ln0-8H-kEU"/>
+                            <constraint firstItem="Qvj-pR-9Uh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pOF-fh-tRf"/>
+                            <constraint firstItem="Qvj-pR-9Uh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wX8-c1-sEv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="bgg-om-Uwd" id="wHX-fA-uSe"/>
+                        <outlet property="counterView" destination="Qvj-pR-9Uh" id="xWU-7o-Af1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="395"/>
+        </scene>
+    </scenes>
+</document>
